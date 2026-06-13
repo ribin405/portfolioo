@@ -6,7 +6,7 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-20 sm:py-24 md:py-32">
+    <section id="services" className="relative py-16 sm:py-24 md:py-32">
       {/* Background accent */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.06),transparent_70%)]" />
 
@@ -44,10 +44,10 @@ export default function Services() {
                     {service.items.map((item, j) => (
                       <li
                         key={j}
-                        className="flex items-center gap-3 text-sm text-zinc-400"
+                        className="flex items-start gap-3 text-sm text-zinc-400 leading-relaxed"
                       >
                         <span
-                          className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.gradient} shrink-0`}
+                          className={`mt-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.gradient} shrink-0`}
                         />
                         {item}
                       </li>

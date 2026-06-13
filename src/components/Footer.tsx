@@ -24,7 +24,7 @@ function LinkedinIcon({ className }: { className?: string }) {
 }
 
 const socials = [
-  { href: socialLinks.email, icon: Mail, label: "Email", isSvg: false },
+  { href: `mailto:${socialLinks.email}`, icon: Mail, label: "Email", isSvg: false },
   { href: socialLinks.github, icon: GithubIcon, label: "GitHub", isSvg: true },
   { href: socialLinks.linkedin, icon: LinkedinIcon, label: "LinkedIn", isSvg: true },
   { href: socialLinks.telegram, icon: Send, label: "Telegram", isSvg: false },
@@ -37,8 +37,8 @@ export default function Footer() {
       {/* Gradient divider */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-3 gap-8 sm:gap-10 items-start">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-10 items-start text-center md:text-left">
           {/* Logo & Description */}
           <div>
             <a href="#home" className="inline-block mb-4">
@@ -46,7 +46,7 @@ export default function Footer() {
                 MR
               </div>
             </a>
-            <p className="text-sm text-zinc-500 leading-relaxed max-w-xs">
+            <p className="text-sm text-zinc-500 leading-relaxed max-w-xs mx-auto md:mx-0">
               Building automation systems, intelligent web applications, and
               digital experiences that drive business growth.
             </p>
@@ -76,7 +76,7 @@ export default function Footer() {
             <h4 className="text-sm font-semibold text-white mb-4 font-outfit">
               Connect
             </h4>
-            <div className="flex gap-2">
+            <div className="flex flex-wrap justify-center md:justify-start gap-2">
               {socials.map((social, i) => {
                 const Icon = social.icon;
                 return (
@@ -85,7 +85,7 @@ export default function Footer() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-zinc-500 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-300"
+                    className="w-11 h-11 md:w-9 md:h-9 rounded-lg bg-white/[0.04] border border-white/[0.06] flex items-center justify-center text-zinc-500 hover:text-white hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-300"
                     aria-label={social.label}
                   >
                     <Icon className="w-4 h-4" />

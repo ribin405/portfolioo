@@ -22,14 +22,14 @@ function GithubIcon({ className }: { className?: string }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-20 sm:py-24 md:py-32">
+    <section id="projects" className="relative py-16 sm:py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Featured Projects"
           subtitle="A showcase of my best work — real solutions solving real problems."
         />
 
-        <div className="space-y-12 sm:space-y-16">
+        <div className="space-y-8 sm:space-y-16">
           {projects.map((project, i) => (
             <AnimateOnScroll key={i} delay={0.1} direction="up">
               <div className="group relative rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 overflow-hidden">
@@ -40,7 +40,7 @@ export default function Projects() {
                 >
                   {/* Image placeholder */}
                   <div
-                    className={`relative aspect-[16/10] lg:aspect-auto min-h-[280px] ${
+                    className={`relative aspect-[16/10] lg:aspect-auto min-h-[190px] sm:min-h-[280px] ${
                       i % 2 === 1 ? "lg:order-2" : ""
                     }`}
                   >
@@ -81,7 +81,7 @@ export default function Projects() {
                       i % 2 === 1 ? "lg:order-1" : ""
                     }`}
                   >
-                    <h3 className="text-2xl md:text-3xl font-bold font-outfit text-white mb-2">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-outfit text-white mb-2 leading-tight">
                       {project.title}
                     </h3>
                     <p className="text-zinc-400 text-sm mb-6">
@@ -101,14 +101,14 @@ export default function Projects() {
                     </div>
 
                     {/* Features */}
-                    <div className="grid grid-cols-2 gap-2 mb-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
                       {project.features.map((f, j) => (
                         <div
                           key={j}
-                          className="flex items-center gap-2 text-sm text-zinc-400"
+                          className="flex items-start gap-2 text-sm text-zinc-400 leading-relaxed"
                         >
                           <span
-                            className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${project.gradient} shrink-0`}
+                            className={`mt-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${project.gradient} shrink-0`}
                           />
                           {f}
                         </div>

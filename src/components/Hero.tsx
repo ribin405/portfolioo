@@ -43,8 +43,10 @@ export default function Hero() {
           setDisplayText(displayText.slice(0, -1));
         }, 30);
       } else {
-        setIsDeleting(false);
-        setRoleIndex((prev) => (prev + 1) % heroData.roles.length);
+        timeout = setTimeout(() => {
+          setIsDeleting(false);
+          setRoleIndex((prev) => (prev + 1) % heroData.roles.length);
+        }, 30);
       }
     }
 
@@ -54,7 +56,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden px-4 py-24 sm:py-28"
     >
       {/* Animated gradient background */}
       <div className="absolute inset-0">
@@ -96,13 +98,13 @@ export default function Hero() {
       ))}
 
       {/* Main content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-24 sm:pt-20 md:pt-0">
+      <div className="relative z-10 w-full max-w-5xl mx-auto text-center">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.08] text-zinc-400 text-sm mb-8 backdrop-blur-sm"
+          className="inline-flex max-w-full items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/[0.05] border border-white/[0.08] text-zinc-400 text-xs sm:text-sm mb-6 sm:mb-8 backdrop-blur-sm"
         >
           <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
           Available for freelance projects
@@ -113,7 +115,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-outfit mb-4 tracking-tight"
+          className="text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold font-outfit mb-4 tracking-tight leading-[1.05]"
         >
           <span className="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent">
             {heroData.name}
@@ -125,9 +127,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="h-10 md:h-12 flex items-center justify-center mb-5 sm:mb-6"
+          className="min-h-12 md:min-h-14 flex items-center justify-center mb-5 sm:mb-6 px-1"
         >
-          <span className="text-xl md:text-2xl lg:text-3xl font-outfit font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+          <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-outfit font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent leading-tight break-words">
             {displayText}
           </span>
           <motion.span
@@ -152,7 +154,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed"
+          className="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto mb-7 sm:mb-10 leading-relaxed"
         >
           {heroData.description}
         </motion.p>
@@ -162,7 +164,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 max-w-sm sm:max-w-none mx-auto"
         >
           <GradientButton href="#projects" icon={Eye}>
             View Projects

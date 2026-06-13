@@ -6,7 +6,7 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="relative py-20 sm:py-24 md:py-32">
+    <section id="solutions" className="relative py-16 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(168,85,247,0.06),transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

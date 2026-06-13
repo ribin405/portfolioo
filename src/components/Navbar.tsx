@@ -69,7 +69,7 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
+          <div className="flex items-center justify-between h-16 md:h-20 pt-[env(safe-area-inset-top)]">
             {/* Logo */}
             <a
               href="#home"
@@ -119,7 +119,7 @@ export default function Navbar() {
             {/* Mobile Toggle */}
             <button
               onClick={() => setIsMobileOpen(!isMobileOpen)}
-              className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition-all"
+              className="md:hidden relative w-11 h-11 flex items-center justify-center rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition-all"
               aria-label="Toggle menu"
             >
               {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -145,9 +145,9 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-[86vw] max-w-sm bg-zinc-950/95 backdrop-blur-xl border-l border-white/[0.06] z-50 md:hidden"
+              className="fixed top-0 right-0 bottom-0 w-[88vw] max-w-sm bg-zinc-950/95 backdrop-blur-xl border-l border-white/[0.06] z-50 md:hidden"
             >
-              <div className="flex flex-col pt-20 px-5 pb-[env(safe-area-inset-bottom)]">
+              <div className="flex max-h-dvh flex-col overflow-y-auto pt-[calc(5rem+env(safe-area-inset-top))] px-4 pb-[calc(1.25rem+env(safe-area-inset-bottom))]">
                 {navLinks.map((link, i) => (
                   <motion.a
                     key={link.href}
@@ -159,7 +159,7 @@ export default function Navbar() {
                       e.preventDefault();
                       handleNavClick(link.href);
                     }}
-                    className={`py-4 px-4 text-base font-medium rounded-lg transition-all duration-300 ${
+                    className={`min-h-12 py-3.5 px-4 text-base font-medium rounded-lg transition-all duration-300 ${
                       activeSection === link.href.slice(1)
                         ? "text-white bg-white/[0.08]"
                         : "text-zinc-400 hover:text-white hover:bg-white/5"

@@ -22,7 +22,7 @@ export default function GradientButton({
   download,
 }: GradientButtonProps) {
   const baseClasses =
-    "inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 cursor-pointer";
+    "inline-flex min-h-11 w-full sm:w-auto items-center justify-center gap-2 px-5 sm:px-6 py-3 rounded-xl font-medium text-sm leading-none transition-all duration-300 cursor-pointer";
 
   const variants = {
     primary:

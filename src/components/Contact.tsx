@@ -5,9 +5,8 @@ import {
   Send,
   Mail,
   MessageCircle,
-  ExternalLink,
 } from "lucide-react";
-import { contactData, socialLinks } from "@/data/portfolio-data";
+import { contactData } from "@/data/portfolio-data";
 import AnimateOnScroll from "./ui/AnimateOnScroll";
 import SectionHeading from "./ui/SectionHeading";
 import GradientButton from "./ui/GradientButton";
@@ -38,7 +37,7 @@ function InstagramIcon({ className }: { className?: string }) {
 }
 
 const socials = [
-  { label: "Email", href: "mribin405@gmail.com", icon: Mail, isSvg: false },
+  { label: "Email", href: "mailto:mribin405@gmail.com", icon: Mail, isSvg: false },
   { label: "GitHub", href: "https://github.com/ribin405", icon: GithubIcon, isSvg: true },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/muhammed-ribin-kp-4632b9392/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bx6lWxHiRRcWnWjrN6ZEttA%3D%3D", icon: LinkedinIcon, isSvg: true },
   { label: "Instagram", href: "https://www.instagram.com/ribi.n_", icon: InstagramIcon, isSvg: true },
@@ -60,7 +59,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 sm:py-24 md:py-32">
+    <section id="contact" className="relative py-16 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(99,102,241,0.08),transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,7 +71,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Contact form */}
           <AnimateOnScroll direction="left" className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label
@@ -89,7 +88,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, name: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm"
+                    className="w-full min-h-11 px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm"
                     placeholder="Your name"
                   />
                 </div>
@@ -108,7 +107,7 @@ export default function Contact() {
                     onChange={(e) =>
                       setFormData({ ...formData, email: e.target.value })
                     }
-                    className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm"
+                    className="w-full min-h-11 px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -129,7 +128,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, subject: e.target.value })
                   }
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm"
+                  className="w-full min-h-11 px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm"
                   placeholder="Project inquiry"
                 />
               </div>
@@ -149,7 +148,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setFormData({ ...formData, message: e.target.value })
                   }
-                  className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/[0.08] text-white placeholder:text-zinc-600 focus:outline-none focus:border-indigo-500/50 focus:ring-1 focus:ring-indigo-500/20 transition-all text-sm resize-y min-h-32"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -163,7 +162,7 @@ export default function Contact() {
           {/* Contact info */}
           <AnimateOnScroll direction="right" className="lg:col-span-2">
             <div className="space-y-6">
-              <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
+              <div className="p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06]">
                 <h3 className="text-lg font-semibold font-outfit text-white mb-4">
                   Get in Touch
                 </h3>
@@ -181,7 +180,7 @@ export default function Contact() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all duration-300 group"
+                        className="flex min-h-14 items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/[0.04] hover:bg-white/[0.06] hover:border-white/[0.12] transition-all duration-300 group"
                       >
                         <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-indigo-500/30 group-hover:to-purple-500/30 transition-all">
                           <Icon className="w-4 h-4 text-indigo-400" />
@@ -196,7 +195,7 @@ export default function Contact() {
               </div>
 
               {/* CTA card */}
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
+              <div className="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10 border border-indigo-500/20">
                 <h4 className="text-base font-semibold font-outfit text-white mb-2">
                   Ready to start a project?
                 </h4>

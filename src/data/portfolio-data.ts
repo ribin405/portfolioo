@@ -4,12 +4,10 @@ import {
   BrainCircuit,
   Briefcase,
   Code2,
-  Database,
   FileCode2,
   Gauge,
   Globe,
   ImageIcon,
-  Laptop,
   LayoutDashboard,
   MessageSquare,
   Palette,
@@ -24,10 +22,8 @@ import {
   Users,
   ClipboardCheck,
   Building,
-  Award,
   Clock,
   CheckCircle,
-  Send,
   type LucideIcon,
 } from "lucide-react";
 

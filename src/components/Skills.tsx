@@ -6,7 +6,7 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-20 sm:py-24 md:py-32">
+    <section id="skills" className="relative py-16 sm:py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Skills & Tools"
@@ -36,7 +36,7 @@ export default function Skills() {
                     {category.skills.map((skill, j) => (
                       <span
                         key={j}
-                        className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.06] text-zinc-400 text-xs font-medium hover:bg-white/[0.08] hover:text-white hover:border-white/[0.12] transition-all duration-300 cursor-default"
+                      className="px-3 py-1.5 rounded-lg bg-white/[0.04] border border-white/[0.06] text-zinc-400 text-xs font-medium leading-tight hover:bg-white/[0.08] hover:text-white hover:border-white/[0.12] transition-all duration-300 cursor-default"
                       >
                         {skill}
                       </span>

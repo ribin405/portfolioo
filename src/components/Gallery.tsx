@@ -16,7 +16,7 @@ export default function Gallery() {
       : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="relative py-20 sm:py-24 md:py-32">
+    <section id="gallery" className="relative py-16 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.06),transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,12 +26,12 @@ export default function Gallery() {
         />
 
         {/* Filter tabs */}
-        <AnimateOnScroll className="flex flex-wrap justify-start sm:justify-center gap-2 mb-10 sm:mb-12 overflow-x-auto sm:overflow-visible pb-1">
+        <AnimateOnScroll className="-mx-4 flex gap-2 overflow-x-auto px-4 pb-2 mb-8 sm:mx-0 sm:flex-wrap sm:justify-center sm:overflow-visible sm:px-0 sm:mb-12">
           {galleryCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${
+              className={`min-h-10 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${
                 activeFilter === cat
                   ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-[0_0_20px_rgba(99,102,241,0.3)]"
                   : "bg-white/[0.04] text-zinc-400 border border-white/[0.06] hover:bg-white/[0.08] hover:text-white"
@@ -53,7 +53,7 @@ export default function Gallery() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3, delay: i * 0.03 }}
-                className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer"
+                className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border border-white/[0.06]"
               >
                 {item.image ? (
                   <>
@@ -74,8 +74,8 @@ export default function Gallery() {
                 )}
 
                 {/* Content overlay */}
-                <div className="absolute inset-0 z-20 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                  <div className="text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0 px-4">
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/65 via-black/10 to-transparent sm:bg-black/0 sm:group-hover:bg-black/30 transition-all duration-300 flex items-end sm:items-center justify-center p-4">
+                  <div className="text-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 transform sm:translate-y-2 sm:group-hover:translate-y-0 px-4">
                     <h4 className="text-white font-outfit font-semibold text-sm mb-1">
                       {item.title}
                     </h4>
@@ -84,7 +84,7 @@ export default function Gallery() {
                 </div>
 
                 {/* Placeholder label */}
-                <div className="absolute inset-0 z-20 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
+                <div className="absolute inset-0 z-20 hidden sm:flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
                   <span className="text-white/40 text-xs font-medium">
                     {item.title}
                   </span>

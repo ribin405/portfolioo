@@ -12,6 +12,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* ─── BASE ──────────────────────────────────────────────────────── */
@@ -23,6 +25,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   touch-action: manipulation;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* ─── FONT UTILITY ──────────────────────────────────────────────── */
