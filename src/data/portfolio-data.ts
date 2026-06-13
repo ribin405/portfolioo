@@ -270,8 +270,8 @@ export const projectsData: Project[] = [
     problem: "Manual visitor tracking and security management.",
     solution:
       "Developed a digital platform to streamline visitor monitoring and improve residential security operations.",
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://urbanease1.onrender.com/",
+    githubLink: "https://github.com/ribin405/urbanease1.git",
     gradient: "from-indigo-600 to-blue-600",
     image:"/screenshots/urbaneaseloginpage.png"
   },
