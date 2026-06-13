@@ -8,6 +8,7 @@ interface GradientButtonProps {
   icon?: LucideIcon;
   className?: string;
   type?: "button" | "submit";
+  download?: boolean | string;
 }
 
 export default function GradientButton({
@@ -18,6 +19,7 @@ export default function GradientButton({
   icon: Icon,
   className = "",
   type = "button",
+  download,
 }: GradientButtonProps) {
   const baseClasses =
     "inline-flex items-center gap-2 px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 cursor-pointer";
@@ -35,7 +37,7 @@ export default function GradientButton({
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} download={download}>
         {Icon && <Icon className="w-4 h-4" />}
         {children}
       </a>

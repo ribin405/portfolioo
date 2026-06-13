@@ -44,7 +44,7 @@ export const navLinks = [
 
 // ─── HERO ───────────────────────────────────────────────────────────────────
 export const heroData = {
-  name: "Muhammed Ribin K P",
+  name: "MUHAMMED RIBIN K P",
   roles: [
     "Automation Developer",
     "Web Developer",
@@ -54,7 +54,7 @@ export const heroData = {
     "Building Automation Systems, Intelligent Web Applications, AI Solutions, and Digital Experiences.",
   description:
     "I help businesses streamline workflows, automate repetitive tasks, build modern web applications, develop Telegram bots, create AI-powered content, and design professional digital assets that improve productivity and business growth.",
-  resumeLink: "#",
+  resumeLink: "/screenshots/resume/Muhammed Ribin KP CV APR 29.pdf",
 };
 
 // ─── ABOUT ──────────────────────────────────────────────────────────────────
@@ -253,11 +253,12 @@ export interface Project {
   liveLink?: string;
   githubLink?: string;
   gradient: string;
+  image?: string;
 }
 
 export const projectsData: Project[] = [
   {
-    title: "UrbanEase",
+    title: "URBANEASE",
     subtitle: "Smart Residential Visitor and Security Management System",
     tech: ["Django", "Python", "SQLite", "Bootstrap"],
     features: [
@@ -272,9 +273,10 @@ export const projectsData: Project[] = [
     liveLink: "#",
     githubLink: "#",
     gradient: "from-indigo-600 to-blue-600",
+    image:"/screenshots/urbaneaseloginpage.png"
   },
   {
-    title: "Smart Hostel Management System",
+    title: "NEXTSTEP",
     subtitle: "Centralized Hostel Administration Platform",
     tech: ["Django", "Python", "SQLite"],
     features: [
@@ -288,6 +290,7 @@ export const projectsData: Project[] = [
     liveLink: "#",
     githubLink: "#",
     gradient: "from-purple-600 to-pink-600",
+    image:"/screenshots/nextstep.png"
   },
   {
     title: "Telegram Automation Bot",
@@ -339,11 +342,17 @@ export interface GalleryItem {
   title: string;
   category: (typeof galleryCategories)[number];
   gradient: string;
+  image?: string;
 }
 
 export const galleryItems: GalleryItem[] = [
-  { title: "UrbanEase Dashboard", category: "Websites", gradient: "from-blue-600 to-indigo-700" },
-  { title: "Hostel Management Portal", category: "Websites", gradient: "from-purple-600 to-violet-700" },
+  {
+    title: "UrbanEase Dashboard",
+    category: "Websites",
+    gradient: "from-blue-600 to-indigo-700",
+    image: "/screenshots/meportf.jpeg",
+  },
+  { title: "Hostel Management Portal", category: "Websites", gradient: "from-purple-600 to-violet-700" ,image:"/screenshots/urbaneaseloginpage.png"},
   { title: "Portfolio Site Design", category: "Websites", gradient: "from-cyan-600 to-blue-700" },
   { title: "Notification Bot Interface", category: "Telegram Bots", gradient: "from-teal-600 to-emerald-700" },
   { title: "Automation Workflow Bot", category: "Telegram Bots", gradient: "from-green-600 to-teal-700" },
@@ -494,7 +503,7 @@ export const testimonialsData: Testimonial[] = [
 
 // ─── SOCIAL LINKS ───────────────────────────────────────────────────────────
 export const socialLinks = {
-  email: "mailto:your-email@example.com",
+  email: "mribin405@gmail.com",
   github: "https://github.com/",
   linkedin: "https://linkedin.com/in/",
   telegram: "https://t.me/",
