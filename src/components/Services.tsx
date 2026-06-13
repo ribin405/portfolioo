@@ -6,7 +6,7 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function Services() {
   return (
-    <section id="services" className="relative py-24 md:py-32">
+    <section id="services" className="relative py-20 sm:py-24 md:py-32">
       {/* Background accent */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.06),transparent_70%)]" />
 
@@ -16,12 +16,12 @@ export default function Services() {
           subtitle="Comprehensive digital solutions tailored to your business needs."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {servicesData.map((service, i) => {
             const Icon = service.icon;
             return (
               <AnimateOnScroll key={i} delay={i * 0.1} direction="up">
-                <div className="group relative h-full p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-500 overflow-hidden">
+                <div className="group relative h-full p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-500 overflow-hidden">
                   {/* Gradient glow on hover */}
                   <div
                     className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.04] transition-opacity duration-500`}

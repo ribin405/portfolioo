@@ -26,7 +26,7 @@ export default function Testimonials() {
   }, [next]);
 
   return (
-    <section className="relative py-24 md:py-32">
+    <section className="relative py-20 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(168,85,247,0.06),transparent_70%)]" />
 
       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +38,7 @@ export default function Testimonials() {
         <AnimateOnScroll>
           <div className="relative">
             {/* Quote card */}
-            <div className="relative p-8 md:p-12 rounded-2xl bg-white/[0.02] border border-white/[0.06] overflow-hidden min-h-[260px] flex items-center">
+            <div className="relative p-6 sm:p-8 md:p-12 rounded-2xl bg-white/[0.02] border border-white/[0.06] overflow-hidden min-h-[240px] sm:min-h-[260px] flex items-center">
               {/* Decorative quote */}
               <Quote className="absolute top-6 left-6 w-8 h-8 text-indigo-500/20" />
 
@@ -51,7 +51,7 @@ export default function Testimonials() {
                   transition={{ duration: 0.4 }}
                   className="text-center w-full"
                 >
-                  <p className="text-lg md:text-xl text-zinc-300 leading-relaxed mb-8 italic">
+                  <p className="text-base sm:text-lg md:text-xl text-zinc-300 leading-relaxed mb-6 sm:mb-8 italic">
                     &ldquo;{testimonialsData[current].quote}&rdquo;
                   </p>
 
@@ -73,7 +73,7 @@ export default function Testimonials() {
             </div>
 
             {/* Navigation */}
-            <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mt-6">
               <button
                 onClick={prev}
                 className="w-10 h-10 rounded-full bg-white/[0.05] border border-white/[0.08] flex items-center justify-center text-zinc-400 hover:text-white hover:bg-white/[0.1] transition-all cursor-pointer"

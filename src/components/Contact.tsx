@@ -60,7 +60,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 md:py-32">
+    <section id="contact" className="relative py-20 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(99,102,241,0.08),transparent_60%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -69,11 +69,11 @@ export default function Contact() {
           subtitle={contactData.description}
         />
 
-        <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-12">
           {/* Contact form */}
           <AnimateOnScroll direction="left" className="lg:col-span-3">
             <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <label
                     htmlFor="contact-name"
@@ -154,7 +154,7 @@ export default function Contact() {
                 />
               </div>
 
-              <GradientButton type="submit" icon={Send}>
+              <GradientButton type="submit" icon={Send} className="sm:w-auto">
                 Send Message
               </GradientButton>
             </form>

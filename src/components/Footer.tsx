@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="grid md:grid-cols-3 gap-10 items-start">
+        <div className="grid md:grid-cols-3 gap-8 sm:gap-10 items-start">
           {/* Logo & Description */}
           <div>
             <a href="#home" className="inline-block mb-4">
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-6 border-t border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-xs text-zinc-600">
             © {new Date().getFullYear()} Muhammed Ribin K P. All rights
             reserved.

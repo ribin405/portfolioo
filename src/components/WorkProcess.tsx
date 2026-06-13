@@ -6,7 +6,7 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function WorkProcess() {
   return (
-    <section className="relative py-24 md:py-32">
+    <section className="relative py-20 sm:py-24 md:py-32">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="My Work Process"
@@ -28,7 +28,7 @@ export default function WorkProcess() {
                   direction={isLeft ? "left" : "right"}
                 >
                   <div
-                    className={`relative flex items-start gap-6 md:gap-0 ${
+                    className={`relative flex items-start gap-6 md:gap-0 pl-12 md:pl-0 ${
                       isLeft ? "md:flex-row" : "md:flex-row-reverse"
                     }`}
                   >

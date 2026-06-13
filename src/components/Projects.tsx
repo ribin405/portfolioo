@@ -22,14 +22,14 @@ function GithubIcon({ className }: { className?: string }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 md:py-32">
+    <section id="projects" className="relative py-20 sm:py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Featured Projects"
           subtitle="A showcase of my best work — real solutions solving real problems."
         />
 
-        <div className="space-y-16">
+        <div className="space-y-12 sm:space-y-16">
           {projects.map((project, i) => (
             <AnimateOnScroll key={i} delay={0.1} direction="up">
               <div className="group relative rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 overflow-hidden">
@@ -77,7 +77,7 @@ export default function Projects() {
 
                   {/* Content */}
                   <div
-                    className={`p-6 md:p-8 lg:p-10 flex flex-col justify-center ${
+                    className={`p-5 sm:p-6 md:p-8 lg:p-10 flex flex-col justify-center ${
                       i % 2 === 1 ? "lg:order-1" : ""
                     }`}
                   >
@@ -138,11 +138,13 @@ export default function Projects() {
                     )}
 
                     {/* Buttons */}
-                    <div className="flex gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3">
                       {project.liveLink && (
                         <a
                           href={project.liveLink}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-medium hover:shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:scale-105 active:scale-95 transition-all duration-300"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-500 text-white text-sm font-medium hover:shadow-[0_0_25px_rgba(99,102,241,0.3)] hover:scale-105 active:scale-95 transition-all duration-300"
                         >
                           <ExternalLink className="w-4 h-4" />
                           Live Demo
@@ -151,7 +153,9 @@ export default function Projects() {
                       {project.githubLink && (
                         <a
                           href={project.githubLink}
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] text-white text-sm font-medium hover:bg-white/[0.1] hover:scale-105 active:scale-95 transition-all duration-300"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white/[0.05] border border-white/[0.08] text-white text-sm font-medium hover:bg-white/[0.1] hover:scale-105 active:scale-95 transition-all duration-300"
                         >
                           <GithubIcon className="w-4 h-4" />
                           GitHub

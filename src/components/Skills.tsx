@@ -6,19 +6,19 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function Skills() {
   return (
-    <section id="skills" className="relative py-24 md:py-32">
+    <section id="skills" className="relative py-20 sm:py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Skills & Tools"
           subtitle="Technologies and tools I use to bring ideas to life."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {skillsData.map((category, i) => {
             const Icon = category.icon;
             return (
               <AnimateOnScroll key={i} delay={i * 0.1} direction="up">
-                <div className="group relative h-full p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-500">
+                <div className="group relative h-full p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-500">
                   {/* Category header */}
                   <div className="flex items-center gap-3 mb-5">
                     <div

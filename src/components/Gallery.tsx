@@ -16,7 +16,7 @@ export default function Gallery() {
       : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="relative py-24 md:py-32">
+    <section id="gallery" className="relative py-20 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.06),transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,12 +26,12 @@ export default function Gallery() {
         />
 
         {/* Filter tabs */}
-        <AnimateOnScroll className="flex flex-wrap justify-center gap-2 mb-12">
+        <AnimateOnScroll className="flex flex-wrap justify-start sm:justify-center gap-2 mb-10 sm:mb-12 overflow-x-auto sm:overflow-visible pb-1">
           {galleryCategories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 cursor-pointer ${
+              className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 cursor-pointer whitespace-nowrap ${
                 activeFilter === cat
                   ? "bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-[0_0_20px_rgba(99,102,241,0.3)]"
                   : "bg-white/[0.04] text-zinc-400 border border-white/[0.06] hover:bg-white/[0.08] hover:text-white"
@@ -43,7 +43,7 @@ export default function Gallery() {
         </AnimateOnScroll>
 
         {/* Gallery grid */}
-        <motion.div layout className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <AnimatePresence mode="popLayout">
             {filtered.map((item, i) => (
               <motion.div

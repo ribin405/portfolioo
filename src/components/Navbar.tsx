@@ -145,9 +145,9 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-72 bg-zinc-950/95 backdrop-blur-xl border-l border-white/[0.06] z-50 md:hidden"
+              className="fixed top-0 right-0 bottom-0 w-[86vw] max-w-sm bg-zinc-950/95 backdrop-blur-xl border-l border-white/[0.06] z-50 md:hidden"
             >
-              <div className="flex flex-col pt-20 px-6">
+              <div className="flex flex-col pt-20 px-5 pb-[env(safe-area-inset-bottom)]">
                 {navLinks.map((link, i) => (
                   <motion.a
                     key={link.href}
@@ -159,7 +159,7 @@ export default function Navbar() {
                       e.preventDefault();
                       handleNavClick(link.href);
                     }}
-                    className={`py-3 px-4 text-base font-medium rounded-lg transition-all duration-300 ${
+                    className={`py-4 px-4 text-base font-medium rounded-lg transition-all duration-300 ${
                       activeSection === link.href.slice(1)
                         ? "text-white bg-white/[0.08]"
                         : "text-zinc-400 hover:text-white hover:bg-white/5"

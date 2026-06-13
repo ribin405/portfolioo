@@ -7,19 +7,19 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function Certifications() {
   return (
-    <section className="relative py-24 md:py-32">
+    <section className="relative py-20 sm:py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Certifications"
           subtitle="Credentials and certifications validating my expertise."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {certificationsData.map((cert, i) => {
             const Icon = cert.icon;
             return (
               <AnimateOnScroll key={i} delay={i * 0.1} direction="up">
-                <div className="group relative h-full p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-500 text-center overflow-hidden">
+                <div className="group relative h-full p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-500 text-center overflow-hidden">
                   {/* Decorative */}
                   <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-indigo-500/10 to-transparent rounded-bl-full" />
 

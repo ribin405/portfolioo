@@ -35,3 +35,11 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # portfolioo
+
+# github
+
+update the github
+
+git add .
+git commit -m "topic"
+git push origin main

@@ -6,7 +6,7 @@ import SectionHeading from "./ui/SectionHeading";
 
 export default function Solutions() {
   return (
-    <section id="solutions" className="relative py-24 md:py-32">
+    <section id="solutions" className="relative py-20 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(168,85,247,0.06),transparent_70%)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,12 +15,12 @@ export default function Solutions() {
           subtitle="Real-world solutions that deliver measurable results for businesses."
         />
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {solutionsData.map((solution, i) => {
             const Icon = solution.icon;
             return (
               <AnimateOnScroll key={i} delay={i * 0.08} direction="up">
-                <div className="group relative h-full p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-indigo-500/30 transition-all duration-500 overflow-hidden">
+                <div className="group relative h-full p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.05] hover:border-indigo-500/30 transition-all duration-500 overflow-hidden">
                   {/* Hover gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.04] to-purple-500/[0.04] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 

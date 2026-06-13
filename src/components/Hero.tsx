@@ -54,7 +54,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
     >
       {/* Animated gradient background */}
       <div className="absolute inset-0">
@@ -96,7 +96,7 @@ export default function Hero() {
       ))}
 
       {/* Main content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-20 md:pt-0">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-24 sm:pt-20 md:pt-0">
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,7 +113,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.7 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-outfit mb-4 tracking-tight"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-outfit mb-4 tracking-tight"
         >
           <span className="bg-gradient-to-b from-white to-zinc-400 bg-clip-text text-transparent">
             {heroData.name}
@@ -125,7 +125,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="h-10 md:h-12 flex items-center justify-center mb-6"
+          className="h-10 md:h-12 flex items-center justify-center mb-5 sm:mb-6"
         >
           <span className="text-xl md:text-2xl lg:text-3xl font-outfit font-semibold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
             {displayText}
@@ -142,7 +142,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="text-base md:text-lg text-zinc-300 max-w-3xl mx-auto mb-4 leading-relaxed font-medium"
+          className="text-sm sm:text-base md:text-lg text-zinc-300 max-w-3xl mx-auto mb-4 leading-relaxed font-medium"
         >
           {heroData.headline}
         </motion.p>
@@ -152,7 +152,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7, duration: 0.6 }}
-          className="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="text-sm md:text-base text-zinc-500 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed"
         >
           {heroData.description}
         </motion.p>
@@ -162,7 +162,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4"
         >
           <GradientButton href="#projects" icon={Eye}>
             View Projects
@@ -186,7 +186,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}

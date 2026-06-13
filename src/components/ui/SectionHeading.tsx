@@ -12,14 +12,14 @@ export default function SectionHeading({
   className = "",
 }: SectionHeadingProps) {
   return (
-    <AnimateOnScroll className={`text-center mb-16 md:mb-20 ${className}`}>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-outfit mb-4">
+    <AnimateOnScroll className={`text-center mb-12 sm:mb-14 md:mb-20 ${className}`}>
+      <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-outfit mb-4">
         <span className="bg-gradient-to-r from-white via-white to-zinc-400 bg-clip-text text-transparent">
           {title}
         </span>
       </h2>
       {subtitle && (
-        <p className="text-zinc-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-zinc-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-1 sm:px-0">
           {subtitle}
         </p>
       )}
