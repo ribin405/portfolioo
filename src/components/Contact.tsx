@@ -1,15 +1,27 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Send,
   Mail,
   MessageCircle,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
 } from "lucide-react";
 import { contactData } from "@/data/portfolio-data";
 import AnimateOnScroll from "./ui/AnimateOnScroll";
 import SectionHeading from "./ui/SectionHeading";
 import GradientButton from "./ui/GradientButton";
+
+// ════════════════════════════════════════════════════════════════
+// ⬇️  REPLACE THESE 3 VALUES WITH YOUR EMAILJS CREDENTIALS  ⬇️
+// ════════════════════════════════════════════════════════════════
+const EMAILJS_SERVICE_ID = "service_trd37n7";   // e.g. "service_abc123"
+const EMAILJS_TEMPLATE_ID = "template_2sjvrej"; // e.g. "template_xyz456"
+const EMAILJS_PUBLIC_KEY = "QSscmxOF0maLh6XhL";    // e.g. "user_abc123"
+// ════════════════════════════════════════════════════════════════
 
 /* Custom SVG icons for brands not in lucide-react */
 function GithubIcon({ className }: { className?: string }) {
@@ -51,11 +63,34 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you for your message! I will get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setStatus("sending");
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setStatus("success");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+
+      // Reset status after 5 seconds
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -153,9 +188,21 @@ export default function Contact() {
                 />
               </div>
 
-              <GradientButton type="submit" icon={Send} className="sm:w-auto">
-                Send Message
-              </GradientButton>
+              {status === "success" ? (
+                <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-sm font-medium">
+                  <CheckCircle className="w-4 h-4" />
+                  Message sent successfully!
+                </div>
+              ) : status === "error" ? (
+                <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-red-500/20 border border-red-500/30 text-red-400 text-sm font-medium">
+                  <AlertCircle className="w-4 h-4" />
+                  Failed to send. Please try again.
+                </div>
+              ) : (
+                <GradientButton type="submit" icon={status === "sending" ? Loader2 : Send} className={`sm:w-auto ${status === "sending" ? "opacity-70 pointer-events-none" : ""}`}>
+                  {status === "sending" ? "Sending..." : "Send Message"}
+                </GradientButton>
+              )}
             </form>
           </AnimateOnScroll>
 

@@ -3,20 +3,29 @@ import {
   Brain,
   BrainCircuit,
   Briefcase,
+  Camera,
   Code2,
   FileCode2,
   Gauge,
   Globe,
+  Headphones,
   ImageIcon,
   LayoutDashboard,
+  Mail,
+  Megaphone,
   MessageSquare,
+  Monitor,
+  Package,
   Palette,
+  Play,
+  Presentation,
   Rocket,
   Search,
   Settings,
   Sparkles,
   Video,
   Workflow,
+  MonitorPlay,
   Zap,
   Shield,
   Users,
@@ -32,6 +41,7 @@ export const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
+  { label: "Services Offered", href: "#services-offered" },
   { label: "Solutions", href: "#solutions" },
   { label: "Projects", href: "#projects" },
   { label: "Gallery", href: "#gallery" },
@@ -512,3 +522,120 @@ export const contactData = {
   description:
     "Have a project in mind or need a digital solution? Let's connect and discuss how I can help you achieve your goals.",
 };
+
+// ─── SERVICES OFFERED ──────────────────────────────────────────────────────
+export interface ServiceOffered {
+  title: string;
+  icon: LucideIcon;
+  items: string[];
+  gradient: string;
+}
+
+export const servicesOfferedData: ServiceOffered[] = [
+  {
+    title: "Short-Form Video Creation",
+    icon: Play,
+    gradient: "from-rose-500 to-pink-500",
+    items: [
+      "Instagram Reels",
+      "YouTube Shorts",
+      "LinkedIn videos",
+      "Product videos",
+    ],
+  },
+  {
+    title: "Social Media Management",
+    icon: Megaphone,
+    gradient: "from-blue-500 to-cyan-500",
+    items: [
+      "Content planning",
+      "Post design",
+      "Video editing",
+      "Scheduling",
+    ],
+  },
+  {
+    title: "AI-Powered Ad Creatives",
+    icon: Sparkles,
+    gradient: "from-violet-500 to-purple-500",
+    items: [
+      "Facebook ads",
+      "Instagram ads",
+      "Google display creatives",
+      "Video ads",
+    ],
+  },
+  {
+    title: "Product Photography & Editing",
+    icon: Camera,
+    gradient: "from-amber-500 to-orange-500",
+    items: [
+      "Background removal",
+      "AI enhancement",
+      "Marketplace images",
+    ],
+  },
+  {
+    title: "Website Design & Maintenance",
+    icon: Monitor,
+    gradient: "from-emerald-500 to-teal-500",
+    items: [
+      "Business websites",
+      "Portfolio websites",
+      "Landing pages",
+    ],
+  },
+  {
+    title: "AI Chatbot & Customer Support Setup",
+    icon: Headphones,
+    gradient: "from-indigo-500 to-blue-500",
+    items: [
+      "WhatsApp bots",
+      "Website chatbots",
+      "Lead collection systems",
+    ],
+  },
+  {
+    title: "Corporate Presentation Design",
+    icon: Presentation,
+    gradient: "from-sky-500 to-indigo-500",
+    items: [
+      "Pitch decks",
+      "Investor presentations",
+      "Training materials",
+    ],
+  },
+  {
+    title: "YouTube Channel Management",
+    icon: MonitorPlay,
+    gradient: "from-red-500 to-rose-500",
+    items: [
+      "Editing",
+      "Thumbnails",
+      "SEO",
+      "Uploading",
+    ],
+  },
+  {
+    title: "AI Automation Services",
+    icon: Mail,
+    gradient: "from-fuchsia-500 to-pink-500",
+    items: [
+      "Email automation",
+      "CRM automation",
+      "Lead generation workflows",
+    ],
+  },
+  {
+    title: "Branding Package Service",
+    icon: Package,
+    gradient: "from-teal-500 to-emerald-500",
+    items: [
+      "Logo",
+      "Brand kit",
+      "Social media creatives",
+      "Promotional videos",
+      "Website",
+    ],
+  },
+];
