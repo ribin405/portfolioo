@@ -112,15 +112,17 @@ export const servicesData: Service[] = [
     ],
   },
   {
-    title: "Telegram Bot Development",
+    title: "AI Bot Development",
     icon: Bot,
     gradient: "from-purple-500 to-pink-500",
     items: [
-      "Custom Telegram Bots",
+      "whatsapp Bots",
+      "telegram Bots",
       "Notification Systems",
       "Automated Workflows",
       "Customer Support Bots",
       "API Integrations",
+      "Chatbots",
     ],
   },
   {
@@ -338,7 +340,8 @@ export const projectsData: Project[] = [
 export const galleryCategories = [
   "All",
   "Websites",
-  "Telegram Bots",
+  "business Solutions",
+  "AI Bots",
   "Posters",
   "Graphic Designs",
   "AI Videos",
@@ -353,22 +356,29 @@ export interface GalleryItem {
 
 export const galleryItems: GalleryItem[] = [
   {
-    title: "UrbanEase Dashboard",
+    title: "Hostel Management Portal",
     category: "Websites",
     gradient: "from-blue-600 to-indigo-700",
-    image: "/screenshots/meportf.jpeg",
+    image: "/screenshots/websites/Screenshot 2026-05-24 231938.png",
   },
-  { title: "Hostel Management Portal", category: "Websites", gradient: "from-purple-600 to-violet-700" ,image:"/screenshots/urbaneaseloginpage.png"},
-  { title: "Portfolio Site Design", category: "Websites", gradient: "from-cyan-600 to-blue-700" },
-  { title: "Notification Bot Interface", category: "Telegram Bots", gradient: "from-teal-600 to-emerald-700" },
-  { title: "Automation Workflow Bot", category: "Telegram Bots", gradient: "from-green-600 to-teal-700" },
-  { title: "Event Promotion Poster", category: "Posters", gradient: "from-rose-600 to-pink-700" },
-  { title: "Tech Conference Poster", category: "Posters", gradient: "from-amber-600 to-orange-700" },
-  { title: "Brand Identity Package", category: "Graphic Designs", gradient: "from-fuchsia-600 to-purple-700" },
-  { title: "Social Media Kit", category: "Graphic Designs", gradient: "from-indigo-600 to-blue-700" },
-  { title: "Marketing Banner Set", category: "Graphic Designs", gradient: "from-pink-600 to-rose-700" },
-  { title: "AI Product Showcase", category: "AI Videos", gradient: "from-violet-600 to-indigo-700" },
-  { title: "AI Marketing Reel", category: "AI Videos", gradient: "from-orange-600 to-red-700" },
+  {
+    title: "Investment Duck",
+    category: "business Solutions",
+    gradient: "from-emerald-500 to-teal-600", image: "/screenshots/investduck/Screenshot 2026-06-16 124453.png"
+  },
+  { title: "UrbanEase Login Page", category: "Websites", gradient: "from-purple-600 to-violet-700", image: "/screenshots/urbaneaseloginpage.png" },
+  { title: "Portfolio Site Design", category: "Websites", gradient: "from-cyan-600 to-blue-700" ,image:"/screenshots/websites/Screenshot 2026-06-16 123957.png"},
+  {title: "AI CV maker", category: "Websites", gradient: "from-emerald-600 to-teal-700" ,image:"/screenshots/websites/Screenshot 2026-05-11 180840.png"},
+  { title: "Notification Bot Interface", category: "AI Bots", gradient: "from-teal-600 to-emerald-700" ,image:"/screenshots/aibot/fc85a5642426e91dbf9064d690fbbad1.jpg"},
+  { title: "Automation Workflow Bot", category: "AI Bots", gradient: "from-green-600 to-teal-700" ,image:"/screenshots/aibot/73079cb83aedc740eb8daffe2665abcc.jpg"},
+  { title: "Event Promotion Poster", category: "Posters", gradient: "from-rose-600 to-pink-700" ,image:"/screenshots/posters/4592cb92e517b63f8daadfe9397625a5.jpg"},
+  { title: "Tech Conference Poster", category: "Posters", gradient: "from-amber-600 to-orange-700" ,image:"/screenshots/posters/d615e4f8bf4d29d006bbba3d414a2a87.jpg"},
+  { title: "Brand Identity Package", category: "Graphic Designs", gradient: "from-fuchsia-600 to-purple-700" ,image:"/screenshots/graphicdesign/c6f615bb7014a3b02a5aa5a8f4634cca.jpg"},
+  { title: "Social Media Kit", category: "Graphic Designs", gradient: "from-indigo-600 to-blue-700" ,image:"/screenshots/graphicdesign/d23f96b096857621f4c4e030e35126a8.jpg"},
+  { title: "Marketing Banner Set", category: "Graphic Designs", gradient: "from-pink-600 to-rose-700" ,image:"/screenshots/investduck/5f84abd36a1325e90d965887c457ce9c.jpg"},
+  { title: "AI Product Showcase", category: "AI Videos", gradient: "from-violet-600 to-indigo-700" ,image:""},
+  { title: "AI Marketing Reel", category: "AI Videos", gradient: "from-orange-600 to-red-700" ,image:""},
+  { title: "Foodtruck Concept", category: "business Solutions", gradient: "from-cyan-600 to-teal-700" ,image:"/screenshots/investduck/concept.png"},
 ];
 
 // ─── WORK PROCESS ───────────────────────────────────────────────────────────

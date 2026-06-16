@@ -13,7 +13,7 @@ export default function ServicesOffered() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          title="Services Offered"
+          title="Additional Services Offered"
           subtitle="End-to-end digital services to grow your brand, automate your workflow, and scale your business."
         />
 
@@ -28,13 +28,8 @@ export default function ServicesOffered() {
                     className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-[0.04] transition-opacity duration-500`}
                   />
 
-                  {/* Header: number badge + icon */}
+                  {/* Header icon */}
                   <div className="flex items-center gap-3 mb-4">
-                    <div
-                      className={`flex items-center justify-center w-9 h-9 rounded-lg bg-gradient-to-br ${service.gradient} text-white text-sm font-bold font-outfit shrink-0`}
-                    >
-                      {String(i + 1).padStart(2, "0")}
-                    </div>
                     <div className="w-8 h-8 rounded-lg bg-white/[0.05] flex items-center justify-center">
                       <Icon className="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors duration-300" />
                     </div>
