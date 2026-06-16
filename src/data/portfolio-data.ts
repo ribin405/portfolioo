@@ -352,6 +352,7 @@ export interface GalleryItem {
   category: (typeof galleryCategories)[number];
   gradient: string;
   image?: string;
+  video?: string;
 }
 
 export const galleryItems: GalleryItem[] = [
@@ -376,8 +377,8 @@ export const galleryItems: GalleryItem[] = [
   { title: "Brand Identity Package", category: "Graphic Designs", gradient: "from-fuchsia-600 to-purple-700" ,image:"/screenshots/graphicdesign/c6f615bb7014a3b02a5aa5a8f4634cca.jpg"},
   { title: "Social Media Kit", category: "Graphic Designs", gradient: "from-indigo-600 to-blue-700" ,image:"/screenshots/graphicdesign/d23f96b096857621f4c4e030e35126a8.jpg"},
   { title: "Marketing Banner Set", category: "Graphic Designs", gradient: "from-pink-600 to-rose-700" ,image:"/screenshots/investduck/5f84abd36a1325e90d965887c457ce9c.jpg"},
-  { title: "AI Product Showcase", category: "AI Videos", gradient: "from-violet-600 to-indigo-700" ,image:""},
-  { title: "AI Marketing Reel", category: "AI Videos", gradient: "from-orange-600 to-red-700" ,image:""},
+  { title: "AI Product Showcase", category: "AI Videos", gradient: "from-violet-600 to-indigo-700" ,video:"/screenshots/AIvedios/finn and juice vedio.mp4", image: "/screenshots/AIvedios/Screenshot 2026-06-16 142547.png"},
+  { title: "AI Marketing Reel", category: "AI Videos", gradient: "from-orange-600 to-red-700", video: "/screenshots/AIvedios/VID_20260616_132730.mp4", image: "/screenshots/AIvedios/Screenshot 2026-06-16 135148.png" },
   { title: "Foodtruck Concept", category: "business Solutions", gradient: "from-cyan-600 to-teal-700" ,image:"/screenshots/investduck/concept.png"},
 ];
 

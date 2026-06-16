@@ -55,7 +55,21 @@ export default function Gallery() {
                 transition={{ duration: 0.3, delay: i * 0.03 }}
                 className="group relative aspect-[4/3] rounded-xl overflow-hidden cursor-pointer border border-white/[0.06]"
               >
-                {item.image ? (
+                {item.video ? (
+                  <>
+                    <video
+                      src={item.video}
+                      poster={item.image}
+                      controls
+                      playsInline
+                      preload="metadata"
+                      loop
+                      muted
+                      className="z-0 object-cover object-center w-full h-full transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/35 via-black/10 to-transparent pointer-events-none" />
+                  </>
+                ) : item.image ? (
                   <>
                     <Image
                       src={item.image}
@@ -74,7 +88,7 @@ export default function Gallery() {
                 )}
 
                 {/* Content overlay */}
-                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/65 via-black/10 to-transparent sm:bg-black/0 sm:group-hover:bg-black/30 transition-all duration-300 flex items-end sm:items-center justify-center p-4">
+                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/65 via-black/10 to-transparent sm:bg-black/0 sm:group-hover:bg-black/30 transition-all duration-300 flex items-end sm:items-center justify-center p-4 pointer-events-none">
                   <div className="text-center opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 transform sm:translate-y-2 sm:group-hover:translate-y-0 px-4">
                     <h4 className="text-white font-outfit font-semibold text-sm mb-1">
                       {item.title}
@@ -84,7 +98,7 @@ export default function Gallery() {
                 </div>
 
                 {/* Placeholder label */}
-                <div className="absolute inset-0 z-20 hidden sm:flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
+                <div className="absolute inset-0 z-20 hidden sm:flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
                   <span className="text-white/40 text-xs font-medium">
                     {item.title}
                   </span>
