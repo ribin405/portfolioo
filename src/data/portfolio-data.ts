@@ -295,8 +295,8 @@ export const projectsData: Project[] = [
     ],
     problem: "Manual hostel administration and record management.",
     solution: "Built a centralized hostel management system to digitize and streamline all hostel operations.",
-    liveLink: "#",
-    githubLink: "#",
+    liveLink: "https://nexstep-bmys.onrender.com",
+    githubLink: "https://github.com/ribin405/nexstep.git",
     gradient: "from-purple-600 to-pink-600",
     image:"/screenshots/nextstep.png"
   },
