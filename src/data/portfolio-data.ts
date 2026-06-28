@@ -300,40 +300,40 @@ export const projectsData: Project[] = [
     gradient: "from-purple-600 to-pink-600",
     image:"/screenshots/nextstep.png"
   },
-  {
-    title: "Telegram Automation Bot",
-    subtitle: "Intelligent Notification & Automation System",
-    tech: ["Python", "Telegram API"],
-    features: [
-      "Automated Notifications",
-      "Scheduled Messages",
-      "Command Handling",
-      "API Integrations",
-    ],
-    problem: "Manual communication and repetitive notification tasks.",
-    solution:
-      "Created an intelligent bot that automates messaging, schedules notifications, and integrates with external APIs.",
-    liveLink: "#",
-    githubLink: "#",
-    gradient: "from-cyan-600 to-teal-600",
-  },
-  {
-    title: "AI Content Creation Projects",
-    subtitle: "AI-Powered Content Generation Suite",
-    tech: ["Runway", "Midjourney", "ChatGPT", "Python"],
-    features: [
-      "AI Video Generation",
-      "AI Images",
-      "Marketing Content",
-      "Social Media Assets",
-    ],
-    problem: "Time-consuming manual content creation for marketing and social media.",
-    solution:
-      "Built AI-powered pipelines that generate professional videos, images, and marketing copy at scale.",
-    liveLink: "#",
-    githubLink: "#",
-    gradient: "from-amber-600 to-orange-600",
-  },
+  // {
+  //   title: "Telegram Automation Bot",
+  //   subtitle: "Intelligent Notification & Automation System",
+  //   tech: ["Python", "Telegram API"],
+  //   features: [
+  //     "Automated Notifications",
+  //     "Scheduled Messages",
+  //     "Command Handling",
+  //     "API Integrations",
+  //   ],
+  //   problem: "Manual communication and repetitive notification tasks.",
+  //   solution:
+  //     "Created an intelligent bot that automates messaging, schedules notifications, and integrates with external APIs.",
+  //   liveLink: "#",
+  //   githubLink: "#",
+  //   gradient: "from-cyan-600 to-teal-600",
+  // },
+  // {
+  //   title: "AI Content Creation Projects",
+  //   subtitle: "AI-Powered Content Generation Suite",
+  //   tech: ["Runway", "Midjourney", "ChatGPT", "Python"],
+  //   features: [
+  //     "AI Video Generation",
+  //     "AI Images",
+  //     "Marketing Content",
+  //     "Social Media Assets",
+  //   ],
+  //   problem: "Time-consuming manual content creation for marketing and social media.",
+  //   solution:
+  //     "Built AI-powered pipelines that generate professional videos, images, and marketing copy at scale.",
+  //   liveLink: "#",
+  //   githubLink: "#",
+  //   gradient: "from-amber-600 to-orange-600",
+  // },
 ];
 
 // ─── GALLERY CATEGORIES ────────────────────────────────────────────────────
@@ -462,27 +462,33 @@ export interface Certification {
 export const certificationsData: Certification[] = [
   {
     title: "Python Programming",
-    issuer: "Certification Authority",
-    date: "Coming Soon",
+    issuer: "nestsoft",
+    date: "March 2026",
     icon: Code2,
   },
   {
-    title: "Web Development",
-    issuer: "Certification Authority",
-    date: "Coming Soon",
+    title: "Data Analyst",
+    issuer: "IBM",
+    date: "August 2025",
     icon: Globe,
   },
   {
-    title: "AI & Machine Learning",
-    issuer: "Certification Authority",
-    date: "Coming Soon",
+    title: "AI Tools and Applications",
+    issuer: "be10x",
+    date: "August 2025",
     icon: BrainCircuit,
   },
   {
-    title: "Digital Marketing",
-    issuer: "Certification Authority",
-    date: "Coming Soon",
+    title: "Hubspot Reporting",
+    issuer: "Hubspot Academy",
+    date: "November 2025",
     icon: Gauge,
+  },
+  {
+    title: "Customer Engagement",
+    issuer: "IBM",
+    date: "January 2026",
+    icon: Globe,
   },
 ];
 
